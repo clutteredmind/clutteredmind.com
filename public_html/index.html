@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body id="top">
 <div class="navbar-wrapper">
     <div class="container">
 
@@ -39,8 +39,8 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="/">Home</a></li>
-                        <li><a href="#about">About Me</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a id="about-me" href="#about">About Me</a></li>
+                        <li><a id="contact-me" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -195,14 +195,35 @@
     <hr class="featurette-divider">
 
     <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p class="pull-right"><a id="back-top" href="#top">Back to top</a></p>
 
         <p>Credit where it's due: This template was borrowed pretty much wholesale from <a
                 href="http://getbootstrap.com/">getbootstrap.com</a></p>
     </footer>
 
 </div>
-
+<script>
+    $(document).ready(function () {
+        $("#back-top").click(function () {
+            $("body,html").animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        $("#about-me").click(function () {
+            $("body,html").animate({
+                scrollTop: $("a[name='about']").offset().top
+            }, 800);
+            return false;
+        });
+        $("#contact-me").click(function () {
+            $("body,html").animate({
+                scrollTop: $("a[name='contact']").offset().top
+            }, 800);
+            return false;
+        });
+    });
+</script>
 </body>
 
 </html>
