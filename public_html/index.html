@@ -2,11 +2,60 @@
 <html lang="en">
 
 <head>
-    <title>Cluttered Mind</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/jquery.min.js"></script>
+    <link href="assets/css/index.css" rel="stylesheet">
+    <link href="assets/css/circle-hours.css" rel="stylesheet">
+    <link href="assets/css/circle-minutes.css" rel="stylesheet">
+    <link href="assets/css/circle-seconds.css" rel="stylesheet">
+    <title>ClutteredMind</title>
 </head>
 
 <body>
-<p>Maybe someday</p>
+    <div class="clock-container">
+        <div class="progress-circle-hours" data-progress="0">
+            <div class="circle">
+                <div class="full progress-circle-hours-slice">
+                    <div class="progress-circle-hours-fill"></div>
+                </div>
+                <div class="progress-circle-hours-slice">
+                    <div class="progress-circle-hours-fill"></div>
+                    <div class="progress-circle-hours-fill progress-circle-hours-bar"></div>
+                </div>
+            </div>
+            <div class="progress-circle-hours-overlay"></div>
+        </div>
+        <div class="progress-circle-minutes" data-progress="0">
+            <div class="circle">
+                <div class="full progress-circle-minutes-slice">
+                    <div class="progress-circle-minutes-fill"></div>
+                </div>
+                <div class="progress-circle-minutes-slice">
+                    <div class="progress-circle-minutes-fill"></div>
+                    <div class="progress-circle-minutes-fill progress-circle-minutes-bar"></div>
+                </div>
+            </div>
+            <div class="progress-circle-minutes-overlay"></div>
+        </div>
+        <div class="progress-circle-seconds" data-progress="0">
+            <div class="circle">
+                <div class="full progress-circle-seconds-slice">
+                    <div class="progress-circle-seconds-fill"></div>
+                </div>
+                <div class="progress-circle-seconds-slice">
+                    <div class="progress-circle-seconds-fill"></div>
+                    <div class="progress-circle-seconds-fill progress-circle-seconds-bar"></div>
+                </div>
+            </div>
+            <div class="progress-circle-seconds-overlay"></div>
+        </div>
+        <div class="text-time-container">
+            <p class="text-time-display">00:00:00</p>
+        </div>
+    </div>
 </body>
+
+<script src="assets/js/timer.js"></script>
 
 </html>
